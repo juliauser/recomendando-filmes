@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recomendações para {{ title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .movie-card img { object-fit: cover; height: 360px; }
+    .movie-card { min-height: 100%; }
+  </style>
+</head>
+<body class="bg-dark text-light">
+  <div class="container py-5">
+    <a href="/" class="btn btn-outline-light mb-4">← Voltar</a>
+    <h1 class="h3 mb-4">Filmes recomendados para: <span class="text-warning">{{ title }}</span></h1>
+
+    {% if recommendations|length == 0 %}
+      <div class="alert alert-info">Nenhuma recomendação encontrada para "{{ title }}". Tente outro filme.</div>
+    {% else %}
+      <div class="row g-4">
+        {% for movie in recommendations %}
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card bg-secondary text-light movie-card h-100">
+              {% if movie.poster_path %}
+                <img src="{{ img_base }}{{ movie.poster_path }}" class="card-img-top" alt="{{ movie.title }}">
+              {% endif %}
+              <div class="card-body">
+                <h5 class="card-title">{{ movie.title }}</h5>
+                <p class="card-text mb-1">
+                  {% if movie.release_date %}
+                    <small>{{ movie.release_date[:4] }}</small>
+                  {% endif %}
+                </p>
+                {% if movie.overview %}
+                  <p class="card-text"><small class="text-light">{{ movie.overview[:140] }}{% if movie.overview|length > 140 %}…{% endif %}</small></p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Paginação simples (client-side: novo POST com o mesmo filme) -->
+    <form method="POST" class="mt-4 d-flex gap-2">
+      <input type="hidden" name="movie_name" value="{{ movie_name }}">
+      <button name="page" value="{{ page - 1 }}" class="btn btn-outline-light" {% if page <= 1 %}disabled{% endif %}>Página anterior</button>
+      <button name="page" value="{{ page + 1 }}" class="btn btn-outline-light">Próxima página</button>
+      <span class="align-self-center ms-2">Página {{ page }}</span>
+    </form>
+  </div>
+</body>
+</html>

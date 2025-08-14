@@ -1,0 +1,12 @@
+
+# Ignorar segredos e artefatos
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env.*
+.envrc
+.DS_Store
+.vscode/
+.idea/
