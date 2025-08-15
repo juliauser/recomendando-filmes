@@ -54,7 +54,7 @@ def index():
             return render_template("index.html", error=err, api_missing=api_missing)
         if not movie_id:
             return render_template("index.html", error="Filme não encontrado. Tente outro.", api_missing=api_missing)
-        page = int(request.args.get("page", 1))
+        page = int(request.form.get("page", 1))
         recs, err = get_recommendations(movie_id, page=page)
         if err:
             return render_template("index.html", error=err, api_missing=api_missing)

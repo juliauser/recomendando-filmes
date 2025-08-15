@@ -1,5 +1,5 @@
 
-# 🎬 Recomendador de Filmes (Flask + TMDB)
+# 🎬 Recomendando filmes (Flask + TMDB)
 
 Aplicação web simples em **Flask** que recomenda filmes com base em um filme informado pelo usuário, usando a API do **The Movie Database (TMDB)**.
 
@@ -14,7 +14,7 @@ Aplicação web simples em **Flask** que recomenda filmes com base em um filme i
 ## 🚀 Como executar localmente
 1. **Clone** o repositório e entre na pasta:
    ```bash
-   git clone https://github.com/seu-usuario/movie_recommender.git
+   git clone https://github.com/juliauser/recomendando-filmes
    cd movie_recommender
    ```
 
@@ -34,7 +34,7 @@ Aplicação web simples em **Flask** que recomenda filmes com base em um filme i
 
 4. **Crie um arquivo `.env`** na raiz do projeto com sua chave da TMDB:
    ```env
-   TMDB_API_KEY=sua_chave_aqui
+   API_KEY=sua_chave_aqui
    ```
 
 5. **Execute** a aplicação:
@@ -54,27 +54,23 @@ Aplicação web simples em **Flask** que recomenda filmes com base em um filme i
 
 ## 📦 Estrutura do projeto
 ```
-movie_recommender/
-│── app.py
-│── requirements.txt
-│── .gitignore
-│── README.md
-└── templates/
-    ├── index.html
-    ├── results.html
-    └── sobre.html
+MOVIE_RECOMMENDER/
+├── static/              # Arquivos CSS, JS, imagens estáticas
+│   └── style.css
+├── templates/           # Templates HTML do Flask
+│   ├── index.html       # Página inicial
+│   ├── results.html     # Resultados e paginação
+│   └── sobre.html       # Página "Sobre"
+├── .env                 # Variáveis de ambiente (API Key)
+├── .gitignore           # Arquivos ignorados pelo Git
+├── app.py               # Código principal da aplicação Flask
+├── README.md            # Documentação do projeto
+└── requirements.txt     # Dependências do Python
 ```
 
 ## 🔒 Segurança (API Key)
 - **Não** suba sua chave da TMDB no GitHub.
-- O projeto usa `python-dotenv` para ler a variável `TMDB_API_KEY` de um arquivo `.env` (ignorado pelo Git).
+- O projeto usa `python-dotenv` para ler a variável `API_KEY` de um arquivo `.env` (ignorado pelo Git).
 - O app mostra um alerta amigável se a chave não estiver configurada.
 
-## ✅ Critérios do teste atendidos
-- Uso de **Flask** (funções integradas, rotas e templates).  
-- Arquivo **requirements.txt** com as dependências.  
-- **README.md** com descrição e instruções de uso.  
-
----
-
-Feito com ❤️ por Julia
+Feito com 🖤 por Julia.

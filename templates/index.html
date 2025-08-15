@@ -7,12 +7,12 @@
   <title>Recomendando Filmes</title>
   <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 </head>
-<body class="bg-dark text-light">
+<body class="bg-dark">
+  <div class="hero-stack">
   <div class="container">
     <header class="mb-4 text-center">
       <h1 class="display-6">🎬 Recomendando Filmes</h1>
       <p class="text-secondary mb-0">Digite o nome de um filme que você já conhece e receba recomendações parecidas.</p>
-      <a class="text-decoration-none" href="/sobre"><small>Sobre o projeto</small></a>
     </header>
 
     <form method="POST" class="mx-auto" style="max-width: 520px;">
@@ -35,6 +35,23 @@
     <footer class="text-center mt-5 text-secondary">
       <small>Feito com Flask + TMDB • <a class="text-decoration-none" href="/sobre">Saiba mais</a></small>
     </footer>
+
+
+  
   </div>
+
+    <div class="social-links">
+  <a href="https://github.com/juliauser" target="_blank" class="social-btn github">
+    <i class="fa-brands fa-github"></i> @juliauser
+  </a>
+  <a href="https://linkedin.com/in/juliauser" target="_blank" class="social-btn linkedin">
+    <i class="fa-brands fa-linkedin"></i> LinkedIn
+  </a>
+</div>
+</div>
+
+<!-- Importa os ícones do Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 </body>
 </html>
