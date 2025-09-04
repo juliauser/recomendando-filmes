@@ -20,7 +20,7 @@ Aplicação web simples em **Flask** que recomenda filmes com base em um filme i
 
 2. (Opcional) **Crie e ative** um ambiente virtual:
    ```bash
-   python -m venv venv
+   py -m venv venv
    # Windows
    venv\Scripts\activate
    # macOS / Linux
