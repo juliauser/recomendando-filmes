@@ -15,7 +15,7 @@ Aplicação web simples em **Flask** que recomenda filmes com base em um filme i
 1. **Clone** o repositório e entre na pasta:
    ```bash
    git clone https://github.com/juliauser/recomendando-filmes
-   cd movie_recommender
+   cd recomendando-filmes
    ```
 
 2. (Opcional) **Crie e ative** um ambiente virtual:
