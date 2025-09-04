@@ -15,7 +15,7 @@ IMG_BASE = "https://image.tmdb.org/t/p/w500"
 def tmdb_get(path, params=None):
     """Helper: faz GET na TMDB já incluindo a API key e idioma pt-BR."""
     if not API_KEY:
-        return None, "API key ausente. Defina TMDB_API_KEY no arquivo .env."
+        return None, "API key ausente. Defina API_KEY no arquivo .env."
     params = params or {}
     params.update({"api_key": API_KEY, "language": "pt-BR"})
     try:
