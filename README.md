@@ -68,6 +68,24 @@ MOVIE_RECOMMENDER/
 └── requirements.txt     # Dependências do Python
 ```
 
+---
+## 📸 Capturas de Tela
+
+### Página Inicial
+![Página inicial da aplicação](https://github.com/juliauser/recomendando-filmes/blob/main/images/index.png?raw=true)
+
+A página inicial onde o usuário digita o nome do filme para buscar recomendações.
+
+### Página de Resultados
+![Página de resultados com a lista de recomendações](https://github.com/juliauser/recomendando-filmes/blob/main/images/search.png?raw=true)
+
+Os resultados são exibidos em cards com informações do filme e paginação.
+
+### Página Sobre
+![Página com informações](https://github.com/juliauser/recomendando-filmes/blob/main/images/sobre.png?raw=true)
+
+Uma pequena descrição sobre o projeto.
+
 ## 🔒 Segurança (API Key)
 - **Não** suba sua chave da TMDB no GitHub.
 - O projeto usa `python-dotenv` para ler a variável `API_KEY` de um arquivo `.env` (ignorado pelo Git).
